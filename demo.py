@@ -1,9 +1,3 @@
-import os
+import datetime
 
-def main():
-    return "Hello, World"
-
-
-cpu_count = os.cpu_count()
-
-print(cpu_count)
+print("todays date is:", datetime.date.today())
