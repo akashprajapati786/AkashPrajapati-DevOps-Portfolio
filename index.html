@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Akash Prajapati | Cloud & DevOps Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+
+        /* ================= THEME VARIABLES ================= */
+        :root {
+            --bg: #0f172a;
+            --card: #020617;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --border: #1e293b;
+            --primary: #38bdf8;
+            --accent: #22d3ee;
+            --header-grad: linear-gradient(135deg, #0ea5e9, #2563eb);
+        }
+
+        body.light {
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --border: #e2e8f0;
+            --primary: #2563eb;
+            --accent: #0284c7;
+            --header-grad: linear-gradient(135deg, #e0f2fe, #bfdbfe);
+        }
+        .badges {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badges img {
+    height: 28px;
+}
+.experience {
+    display: grid;
+    gap: 25px;
+}
+
+.exp-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.exp-card h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.exp-role {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.exp-date {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.exp-card ul {
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.exp-card li {
+    margin-bottom: 8px;
+}
+
+
+        /* ================= BASE ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            background: var(--header-grad);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* Theme Toggle */
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Resume Button */
+        .resume-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 22px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        /* ================= SECTIONS ================= */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about {
+            font-size: 1.05rem;
+            color: var(--muted);
+        }
+
+        /* ================= SKILLS ================= */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-box h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        /* ================= PROJECTS ================= */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .project h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--card);
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+
+<body id="body">
+
+<header>
+    <button class="toggle" onclick="toggleTheme()">🌗 Theme</button>
+
+    <h1>Akash Prajapati</h1>
+    <p>Cloud & DevOps Engineer | AWS | Kubernetes | Terraform | CI/CD</p>
+    <div class="badges">
+    <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-orange?logo=amazonaws&logoColor=white" alt="AWS Badge">
+    <img src="https://img.shields.io/badge/Microsoft-Azure-blue?logo=microsoftazure&logoColor=white" alt="Azure Badge">
+</div>
+
+
+    <a class="resume-btn" href="Akash_Cloud.pdf" download>
+        📄 Download Resume
+    </a>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p class="about">
+        I am a Cloud & DevOps Engineer with hands-on experience in AWS, Azure,
+        Kubernetes, CI/CD automation, and Infrastructure as Code.
+        I specialize in building scalable, secure, and cost-optimized cloud solutions.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <div class="skill-box">
+            <h3>Cloud Platforms</h3>
+            <p>AWS (EC2, VPC, IAM, S3, RDS), Azure (VM, VNet, NSG, AKS)</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>DevOps & CI/CD</h3>
+            <p>Jenkins, GitHub Actions, GitLab CI/CD, Shell & Python</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Containers</h3>
+            <p>Docker, Kubernetes (EKS / AKS), Docker Compose</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Infrastructure as Code</h3>
+            <p>Terraform (modules, state, workspaces)</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Monitoring</h3>
+            <p>CloudWatch, Azure Monitor, Prometheus (basic)</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Operating Systems</h3>
+            <p>Linux (Ubuntu, RHEL), Windows Server</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Experience</h2>
+
+    <div class="experience">
+
+        <div class="exp-card">
+            <h3>DXC Technology</h3>
+            <div class="exp-role">Analyst II – Cloud Engineer</div>
+            <div class="exp-date">Oct 2023 – Present</div>
+
+            <ul>
+                <li>Managed multi-cloud (Azure & AWS) environments supporting 40+ production and staging workloads.</li>
+                <li>Acted as Azure SME provisioning VMs, VNets, NSGs, storage, and governance policies.</li>
+                <li>Administered and optimized AKS clusters including scaling, upgrades, RBAC, and monitoring.</li>
+                <li>Automated operational tasks using Shell scripts for system health and maintenance.</li>
+                <li>Performed Linux & Windows server administration including patching and access control.</li>
+                <li>Implemented IAM policies and cloud governance ensuring security and compliance.</li>
+                <li>Drove cost optimization initiatives by identifying unused and oversized resources.</li>
+                <li>Provided on-call support and performed RCA for critical production incidents.</li>
+            </ul>
+        </div>
+
+        <div class="exp-card">
+            <h3>DXC Technology</h3>
+            <div class="exp-role">Associate Professional Software Engineer</div>
+            <div class="exp-date">Feb 2022 – Oct 2023</div>
+
+            <ul>
+                <li>Supported Azure infrastructure ensuring high availability and performance.</li>
+                <li>Configured and monitored network security components including firewalls and NSGs.</li>
+                <li>Implemented MFA and access controls for enterprise systems.</li>
+                <li>Improved patch management for Linux and Windows servers, reducing vulnerabilities.</li>
+                <li>Automated server provisioning and configuration tasks.</li>
+                <li>Worked with ServiceNow for incident, change, and service request management.</li>
+                <li>Maintained IT documentation, SOPs, and compliance records.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Certifications</h2>
+
+    <div class="certifications">
+
+        <div class="cert-card">
+            <img src="https://img.shields.io/badge/Microsoft-AZ--900-blue?logo=microsoftazure&logoColor=white">
+            <div>
+                <h3>Microsoft Azure Fundamentals</h3>
+                <p>AZ-900</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <img src="https://img.shields.io/badge/Microsoft-AZ--104-blue?logo=microsoftazure&logoColor=white">
+            <div>
+                <h3>Microsoft Azure Administrator Associate</h3>
+                <p>AZ-104</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <img src="https://img.shields.io/badge/Microsoft-AZ--305-blue?logo=microsoftazure&logoColor=white">
+            <div>
+                <h3>Microsoft Azure Solutions Architect Expert</h3>
+                <p>AZ-305</p>
+            </div>
+        </div>
+
+        <div class="cert-card">
+            <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-orange?logo=amazonaws&logoColor=white">
+            <div>
+                <h3>AWS Cloud Practitioner</h3>
+                <p>Foundational</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>Terraform Azure Infrastructure</h3>
+            <p>Reusable Terraform modules with remote state and multi-environment support.</p>
+        </div>
+
+        <div class="project">
+            <h3>CI/CD Automation</h3>
+            <p>End-to-end pipelines using Jenkins and GitHub Actions.</p>
+        </div>
+
+        <div class="project">
+            <h3>Docker & Kubernetes</h3>
+            <p>Containerized and deployed applications on EKS / AKS.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:akashprajapatidevops@gmail.com">akashprajapatidevops@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/akkuakash786">github.com/akkuakash786</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/akkuakash786">linkedin.com/in/akkuakash786</a></p>
+    <br>
+    <a class="resume-btn" href="Akash_Cloud.pdf" download>
+        📄 Download Resume
+    </a>
+</section>
+
+<footer>
+    © 2026 Akash Prajapati | Cloud & DevOps Engineer
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.getElementById('body').classList.toggle('light');
+    }
+</script>
+
+</body>
+</html>
